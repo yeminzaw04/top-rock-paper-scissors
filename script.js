@@ -32,11 +32,13 @@ let playGame = () => {
     let displayScores = document.createElement('p');
     let finalAnnouncement = document.createElement('p');
     let startOver = document.createElement('button');
+    startOver.classList.add('btn');
     startOver.textContent = "Start Over";
 
     // Check who first get 5 scores
     let scoreCheck = () => {
-        finalAnnouncement.textContent = "";
+        // Needed only when there is no reset button to reset the announcement from the previous round
+        // finalAnnouncement.textContent = "";
         switch (5) {
             case humanScore:
                 finalAnnouncement.textContent = "Yay, you win!"
